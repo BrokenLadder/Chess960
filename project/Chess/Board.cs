@@ -129,7 +129,7 @@ namespace Chess
         {
             Random randNum = new Random();
             int R1Pos = randNum.Next(8);
-            List<int> availablePlaces = new List<int>() {0, 1, 2, 3, 4, 5, 6, 7 };
+            List<int> availablePlaces = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
             for (int i = 0; i < 8; i++)
             {
                 SetPiece(Piece.PAWN, Player.WHITE, i, 1);
@@ -140,7 +140,8 @@ namespace Chess
             availablePlaces.Remove(R1Pos);
             int R2Pos = PlaceSecondRooks(R1Pos);
             availablePlaces.Remove(R2Pos);
-
+         
+          
         }
         public int PlaceSecondRooks(int r1Pos)
         {

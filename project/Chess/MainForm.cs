@@ -68,12 +68,7 @@ namespace Chess
         /// </summary>
         private void NewGame(int nPlayers)
         {
-            bool chess960 = false;
-            if(nPlayers == 3)
-            {
-                chess960 = true;
-                nPlayers = 2;
-            }
+          
             // clean up all of the things first
             if (!m_manualBoard) Stop();
 

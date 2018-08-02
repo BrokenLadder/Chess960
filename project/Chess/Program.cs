@@ -13,11 +13,6 @@ namespace Chess
         [STAThread]
         static void Main()
         {
-           DialogResult msgBox = MessageBox.Show("Chess960 Options", "Play with chess960 rules?", MessageBoxButtons.YesNo);
-            if(msgBox == DialogResult.Yes)
-            {
-
-            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

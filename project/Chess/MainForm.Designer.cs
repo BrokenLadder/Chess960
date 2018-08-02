@@ -76,7 +76,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tmrWhite = new System.Windows.Forms.Timer(this.components);
             this.tmrBlack = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitView)).BeginInit();
@@ -104,7 +103,6 @@
             this.newAIGame,
             this.newGameToolStripMenuItem,
             this.new2PlayerGameToolStripMenuItem,
-            this.toolStripMenuItem1,
             this.endCurrentGameToolStripMenuItem,
             this.toolStripSeparator2,
             this.manualBoardToolStripMenuItem,
@@ -306,7 +304,7 @@
             this.mnuDif4,
             this.mnuDif5});
             this.difficultyDepthToolStripMenuItem.Name = "difficultyDepthToolStripMenuItem";
-            this.difficultyDepthToolStripMenuItem.Size = new System.Drawing.Size(210, 36);
+            this.difficultyDepthToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.difficultyDepthToolStripMenuItem.Text = "Difficulty (Depth)";
             // 
             // mnuDif1
@@ -381,7 +379,7 @@
             this.splitView.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitView.IsSplitterFixed = true;
             this.splitView.Location = new System.Drawing.Point(0, 44);
-            this.splitView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.splitView.Margin = new System.Windows.Forms.Padding(6);
             this.splitView.Name = "splitView";
             // 
             // splitView.Panel1
@@ -404,7 +402,7 @@
             this.splitView.Panel2.Controls.Add(this.label2);
             this.splitView.Panel2MinSize = 200;
             this.splitView.Size = new System.Drawing.Size(1248, 807);
-            this.splitView.SplitterDistance = 1024;
+            this.splitView.SplitterDistance = 1020;
             this.splitView.SplitterWidth = 8;
             this.splitView.TabIndex = 2;
             // 
@@ -433,7 +431,7 @@
             // picTurn
             // 
             this.picTurn.Location = new System.Drawing.Point(178, 23);
-            this.picTurn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.picTurn.Margin = new System.Windows.Forms.Padding(6);
             this.picTurn.Name = "picTurn";
             this.picTurn.Size = new System.Drawing.Size(78, 38);
             this.picTurn.TabIndex = 5;
@@ -452,7 +450,7 @@
             // txtLog
             // 
             this.txtLog.Location = new System.Drawing.Point(32, 173);
-            this.txtLog.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtLog.Margin = new System.Windows.Forms.Padding(6);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -512,12 +510,6 @@
             // 
             this.tmrBlack.Tick += new System.EventHandler(this.tmrBlack_Tick);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(402, 38);
-            this.toolStripMenuItem1.Text = "Chess960";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -527,7 +519,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MinimumSize = new System.Drawing.Size(1274, 896);
             this.Name = "MainForm";
             this.Text = "Chess";
@@ -596,7 +588,6 @@
         private System.Windows.Forms.Timer tmrWhite;
         private System.Windows.Forms.Timer tmrBlack;
         private System.Windows.Forms.ToolStripMenuItem newAIGame;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

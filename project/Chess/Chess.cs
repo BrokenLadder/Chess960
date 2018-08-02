@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace Chess
 {
@@ -11,12 +12,19 @@ namespace Chess
         public ChessBoard Board { get; private set; }
         public Player Turn { get; private set; }
         public position_t Selection { get; private set; }
+        public bool gameIs960 { get; set; }
 
         private UIBoard m_UI;
         private int m_nPlayers;
 
-        public Chess(UIBoard ui, int nPlayers = 1, bool setupBoard = true, bool is960 = false)
+        public Chess(UIBoard ui, int nPlayers = 1, bool setupBoard = true)
         {
+            bool chess960 = false;
+            DialogResult msgBox = MessageBox.Show("Chess960 Options", "Play with chess960 rules?", MessageBoxButtons.YesNo);
+            if (msgBox == DialogResult.Yes)
+            {
+                chess960 = true;
+            }
             // callback setup
             this.m_UI = ui;
             this.m_UI.SetStatus(true, "Generating...");
@@ -31,7 +39,7 @@ namespace Chess
             this.Board = new ChessBoard();
             if (setupBoard)
             {
-                if (is960)
+                if (chess960)
                 {
                     this.Board.SetInitialPlacement960();
                 }
