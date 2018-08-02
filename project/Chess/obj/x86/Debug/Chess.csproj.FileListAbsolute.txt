@@ -1,0 +1,18 @@
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\bin\debug\Chess.exe
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\bin\debug\Chess.pdb
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.MainForm.resources
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.Properties.Resources.resources
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.csproj.GenerateResource.Cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.exe
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess Repos\chess2\project\Chess\obj\x86\Debug\Chess.pdb
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\bin\debug\Chess.exe
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\bin\debug\Chess.pdb
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.MainForm.resources
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.Properties.Resources.resources
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.csproj.GenerateResource.Cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.exe
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\Chess\obj\x86\Debug\Chess.pdb
