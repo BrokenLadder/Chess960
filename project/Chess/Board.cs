@@ -13,7 +13,9 @@ namespace Chess
         public Dictionary<Player, position_t> Kings { get; private set; }
         public Dictionary<Player, List<position_t>> Pieces { get; private set; }
         public Dictionary<Player, position_t> LastMove { get; private set; }
+        List<int> availablePlaces = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
 
+        Random randNum = new Random();
         public ChessBoard()
         {
             // init blank board grid
@@ -127,39 +129,88 @@ namespace Chess
         }
         public void SetInitialPlacement960()
         {
-            Random randNum = new Random();
-            int R1Pos = randNum.Next(8);
-            List<int> availablePlaces = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
+            int kPos = randNum.Next(1, 7);
             for (int i = 0; i < 8; i++)
             {
                 SetPiece(Piece.PAWN, Player.WHITE, i, 1);
                 SetPiece(Piece.PAWN, Player.BLACK, i, 6);
             }
-            SetPiece(Piece.ROOK, Player.WHITE, R1Pos, 0);
-            SetPiece(Piece.ROOK, Player.BLACK, R1Pos, 7);
-            availablePlaces.Remove(R1Pos);
-            int R2Pos = PlaceSecondRooks(R1Pos);
-            availablePlaces.Remove(R2Pos);
-         
-          
+            Kings[Player.WHITE] = new position_t(kPos, 0);
+            Kings[Player.BLACK] = new position_t(kPos, 7);
+            SetPiece(Piece.KING, Player.WHITE, kPos, 0);
+            SetPiece(Piece.KING, Player.BLACK, kPos, 7);
+            availablePlaces.Remove(kPos);
+            placeRooks(kPos);
+            placeBishops();
+            placeKnightsAndQueens();
         }
-        public int PlaceSecondRooks(int r1Pos)
+
+        private void placeKnightsAndQueens()
         {
-            Random randNum = new Random();
+            int knightPos = getAvailablePlacement();
+            availablePlaces.Remove(knightPos);
+            int knight2Pos = getAvailablePlacement();
+            availablePlaces.Remove(knight2Pos);
+            int queenPos = getAvailablePlacement();
+            availablePlaces.Remove(queenPos);
+            SetPiece(Piece.KNIGHT, Player.WHITE, knightPos, 0);
+            SetPiece(Piece.KNIGHT, Player.WHITE, knight2Pos, 0);
+            SetPiece(Piece.KNIGHT, Player.BLACK, knightPos, 7);
+            SetPiece(Piece.KNIGHT, Player.BLACK, knight2Pos, 7);
+            SetPiece(Piece.QUEEN, Player.WHITE, queenPos, 0);
+            SetPiece(Piece.QUEEN, Player.BLACK, queenPos, 7);
+
+        }
+
+        private void placeBishops()
+        {
+            int bishopPos = 0;
+            int bishop2Pos = 0;
             bool correctPlacement = false;
-            int R2Pos = randNum.Next(8);
-            while (correctPlacement)
+            while(correctPlacement == false)
             {
-                R2Pos = randNum.Next(8);
-                int space = r1Pos - R2Pos;
-                if(space > 1 || space < -1)
+                bishopPos = getAvailablePlacement();
+                bishop2Pos = getAvailablePlacement();
+                if ((bishopPos % 2) != (bishop2Pos % 2))
                 {
-                    SetPiece(Piece.ROOK, Player.WHITE, R2Pos, 0);
-                    SetPiece(Piece.ROOK, Player.BLACK, R2Pos, 7);
+                    SetPiece(Piece.BISHOP, Player.WHITE, bishopPos, 0);
+                    SetPiece(Piece.BISHOP, Player.WHITE, bishop2Pos, 0);
+                    SetPiece(Piece.BISHOP, Player.BLACK, bishopPos, 7);
+                    SetPiece(Piece.BISHOP, Player.BLACK, bishop2Pos, 7);
+                    availablePlaces.Remove(bishopPos);
+                    availablePlaces.Remove(bishop2Pos);
                     correctPlacement = true;
                 }
+
             }
-            return R2Pos;
+        }
+
+        public int getAvailablePlacement()
+        {
+            return availablePlaces[randNum.Next(availablePlaces.Count)];
+        }
+
+        public void placeRooks(int KPos)
+        {
+            int rookPos = 0;
+            int rook2Pos = 0;
+            bool correctPlacement = false;
+            while (correctPlacement == false)
+            {
+                rookPos = getAvailablePlacement();
+                rook2Pos = getAvailablePlacement();
+                if ((rookPos < KPos  && rook2Pos > KPos) || (rookPos > KPos && rook2Pos < KPos)){
+                    SetPiece(Piece.ROOK, Player.WHITE, rookPos, 0);
+                    SetPiece(Piece.ROOK, Player.BLACK, rookPos, 7);
+                    SetPiece(Piece.ROOK, Player.WHITE, rook2Pos, 0);
+                    SetPiece(Piece.ROOK, Player.BLACK, rook2Pos, 7);
+                    availablePlaces.Remove(rookPos);
+                    availablePlaces.Remove(rook2Pos);
+                    correctPlacement = true;         
+                }
+            }
+           
+
         }
         public void SetInitialPlacement()
         {
