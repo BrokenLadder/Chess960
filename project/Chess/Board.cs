@@ -13,11 +13,11 @@ namespace Chess
         public Dictionary<Player, position_t> Kings { get; private set; }
         public Dictionary<Player, List<position_t>> Pieces { get; private set; }
         public Dictionary<Player, position_t> LastMove { get; private set; }
-        List<int> availablePlaces = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
-
+        public List<int> AvailablePlaces { get; set; }
         Random randNum = new Random();
         public ChessBoard()
         {
+            AvailablePlaces = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7 };
             // init blank board grid
             Grid = new piece_t[8][];
             for (int i = 0; i < 8; i++)
@@ -139,20 +139,20 @@ namespace Chess
             Kings[Player.BLACK] = new position_t(kPos, 7);
             SetPiece(Piece.KING, Player.WHITE, kPos, 0);
             SetPiece(Piece.KING, Player.BLACK, kPos, 7);
-            availablePlaces.Remove(kPos);
+            AvailablePlaces.Remove(kPos);
             placeRooks(kPos);
             placeBishops();
             placeKnightsAndQueens();
         }
 
-        private void placeKnightsAndQueens()
+        public void placeKnightsAndQueens()
         {
             int knightPos = getAvailablePlacement();
-            availablePlaces.Remove(knightPos);
+            AvailablePlaces.Remove(knightPos);
             int knight2Pos = getAvailablePlacement();
-            availablePlaces.Remove(knight2Pos);
+            AvailablePlaces.Remove(knight2Pos);
             int queenPos = getAvailablePlacement();
-            availablePlaces.Remove(queenPos);
+            AvailablePlaces.Remove(queenPos);
             SetPiece(Piece.KNIGHT, Player.WHITE, knightPos, 0);
             SetPiece(Piece.KNIGHT, Player.WHITE, knight2Pos, 0);
             SetPiece(Piece.KNIGHT, Player.BLACK, knightPos, 7);
@@ -162,7 +162,7 @@ namespace Chess
 
         }
 
-        private void placeBishops()
+        public void placeBishops()
         {
             int bishopPos = 0;
             int bishop2Pos = 0;
@@ -177,8 +177,8 @@ namespace Chess
                     SetPiece(Piece.BISHOP, Player.WHITE, bishop2Pos, 0);
                     SetPiece(Piece.BISHOP, Player.BLACK, bishopPos, 7);
                     SetPiece(Piece.BISHOP, Player.BLACK, bishop2Pos, 7);
-                    availablePlaces.Remove(bishopPos);
-                    availablePlaces.Remove(bishop2Pos);
+                    AvailablePlaces.Remove(bishopPos);
+                    AvailablePlaces.Remove(bishop2Pos);
                     correctPlacement = true;
                 }
 
@@ -187,7 +187,7 @@ namespace Chess
 
         public int getAvailablePlacement()
         {
-            return availablePlaces[randNum.Next(availablePlaces.Count)];
+            return AvailablePlaces[randNum.Next(AvailablePlaces.Count)];
         }
 
         public void placeRooks(int KPos)
@@ -204,8 +204,8 @@ namespace Chess
                     SetPiece(Piece.ROOK, Player.BLACK, rookPos, 7);
                     SetPiece(Piece.ROOK, Player.WHITE, rook2Pos, 0);
                     SetPiece(Piece.ROOK, Player.BLACK, rook2Pos, 7);
-                    availablePlaces.Remove(rookPos);
-                    availablePlaces.Remove(rook2Pos);
+                    AvailablePlaces.Remove(rookPos);
+                    AvailablePlaces.Remove(rook2Pos);
                     correctPlacement = true;         
                 }
             }

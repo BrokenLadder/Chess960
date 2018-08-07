@@ -1,0 +1,9 @@
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\bin\Debug\ChessTests.dll
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\bin\Debug\ChessTests.pdb
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\bin\Debug\Chess.exe
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\bin\Debug\Chess.pdb
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\obj\Debug\ChessTests.csprojResolveAssemblyReference.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\obj\Debug\ChessTests.csproj.CoreCompileInputs.cache
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\obj\Debug\ChessTests.dll
+C:\Users\Gabe B\Desktop\NeumontWork\Q32018\ProjectsClass\Chess960\Chess960\project\ChessTests\obj\Debug\ChessTests.pdb
